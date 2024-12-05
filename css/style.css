@@ -15,6 +15,10 @@ body {
   margin: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
 /* Mise en page (positionnement)
 ========================================================================== */
 
@@ -27,6 +31,7 @@ body {
 /* Header / Navigations / Footer 
 ========================================================================== */
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -40,6 +45,7 @@ header {
   max-height: 50px;
 }
 
+/* Nav */
 nav {
   display: flex;
   gap: 20px;
@@ -51,6 +57,7 @@ nav a {
   color: #000000;
 }
 
+/* Menu mobile */
 .menu-mobile {
   display: none;
   cursor: pointer;
@@ -64,13 +71,13 @@ nav a {
   object-fit: contain;
 }
 
+/* Footer */
 .footer-content {
   width: 100%;
   background-color: #27272a;
   font-size: 1.1rem;
 }
 
-/* Footer */
 .footer-sillon {
   display: flex;
   justify-content: space-between;
@@ -111,13 +118,32 @@ nav a {
   .menu-mobile {
     display: block;
   }
+
+}
+
+@media screen and (max-width: 600px) {
+  .homepage-main-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Composantes générales (exemples : section, cartes, tableaux, etc.)
 ========================================================================== */
-.main-content {
+
+/* Homepage - Index.html*/
+.homepage-main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
   flex: 1;
 }
+
+.homepage-main-content > .image-grid {
+  grid-column: 1 / 4;
+}
+
+
 
 /* Formulaires
 ========================================================================== */
