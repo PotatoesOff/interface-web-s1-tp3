@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 /* Typographies / Couleurs (exemples : titres, paragraphes, liens, etc.)
@@ -7,10 +8,9 @@
 
 body {
   display: flex;
+  background-color: white;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "Inter", sans-serif;
-  background-color: white;
   padding: 0;
   margin: 0;
 }
@@ -18,7 +18,9 @@ body {
 img {
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
+
 /* Mise en page (positionnement)
 ========================================================================== */
 
@@ -118,7 +120,6 @@ nav a {
   .menu-mobile {
     display: block;
   }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -130,20 +131,86 @@ nav a {
 /* Composantes générales (exemples : section, cartes, tableaux, etc.)
 ========================================================================== */
 
-/* Homepage - Index.html*/
+/* Homepage - index.html
+!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
+
 .homepage-main-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 10px;
   flex: 1;
+  margin-top: 50px;
 }
 
-.homepage-main-content > .image-grid {
-  grid-column: 1 / 4;
+/* Formulaire de connexion */
+.login-container {
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 3;
+  justify-content: left;
+  align-items: center;
+  display: flex;
 }
 
+.login-form {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.login-form h1 {
+  font-size: 3.75rem;
+  margin-bottom: 10px;
+}
 
+.login-form p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.long-form-textbox {
+  height: 60px;
+}
+
+.login-form button {
+  width: 30%;
+  font-size: 1.5rem;
+  margin: 10px 10px 10px 0;
+  height: 70px;
+  color: #fafafa;
+  background-color: #27272a;
+  border-radius: 10px;
+}
+
+/* Albums CSS */
+.album-1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.album-2 {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.album-3 {
+  grid-row: 3 / span 4;
+  grid-column: 1 / span 2;
+}
+
+.album-4 {
+  grid-row: 3;
+  grid-column: 3;
+}
+
+.album-5 {
+  grid-row: 4;
+  grid-column: 3;
+}
+
+/* Disques - pages/disques.html
+!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
 
 /* Formulaires
 ========================================================================== */
