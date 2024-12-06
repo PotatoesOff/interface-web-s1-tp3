@@ -62,7 +62,6 @@ nav a {
 /* Menu mobile */
 .menu-mobile {
   display: none;
-  cursor: pointer;
   width: 30px;
   height: 30px;
 }
@@ -214,55 +213,146 @@ nav a {
 /* Disques - pages/disques.html
 !--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
 
-.disques-main-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 10px;
-  flex: 1;
-  margin-top: 50px;
+.disques-title {
+    font-size: 2.75rem;
+    margin-bottom: 10px;
 }
 
-.disques-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  grid-row: 1;
-  grid-column: 1 / span 4;
+.section-disques {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    display: flex;
+    max-width: 500px; 
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 350px; 
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #27272a;
+    color: white;
+    border: none;
+    white-space: nowrap;
 }
 
 .disques-title {
-  grid-row: 1;
-  grid-column: 1;
-  font-size: 3.75rem;
-  margin: 0; 
+    margin: 0;
 }
 
-.disques-title {
-  font-size: 3rem;
-  display: inline-block;
+/* Responsive page/disques.html - recherche */
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form {
+        width: 100%;
+        max-width: none;
+    }
+
+    .search-input {
+        width: 100%;
+    }
 }
 
-.disques-search-section {
-  display: inline-block;
+.categories {
+    background-color: #fff;
+    border-radius: 4px;
+	margin-top: 50px;
 }
 
-.search-form {
-  grid-row: 1;
-  grid-column: 3 / span 4;
-  display: flex;
-  gap: 10px;
-  align-items: center;
+.categories h2 {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 0 20px 0;
 }
 
-.search-form input {
-  padding: 20px 30px 20px 30px;
-  height: 50px;
+.albums-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }
+
+.album-card {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 5px;
+    padding: 15px;
+}
+
+.album-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    grid-row: 1;
+}
+
+.album-card p {
+    margin: 15px 0 0 0;
+    color: #666;
+    grid-row: 2;
+	justify-self: center;
+}
+
+.album-card h3 {
+    margin: 0 15px 0 0;
+    font-size: 1.2em;
+    grid-row: 3;
+	justify-self: center;
+}
+
+.album-card button {
+    padding: 8px 16px;
+    background-color: #27272a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    grid-row: 4;
+	width: 50%;
+	justify-self: center;
+}
+
+
+/* Responsive page/disques.html - albums */
+@media (max-width: 1200px) {
+    .albums-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .albums-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .albums-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* Formulaires
 ========================================================================== */
 
 /* Règles spécifiques aux pages
 ========================================================================== */
+
