@@ -121,7 +121,6 @@ nav a {
   }
 }
 
-
 /* Composantes générales (exemples : section, cartes, tableaux, etc.)
 ========================================================================== */
 
@@ -214,7 +213,9 @@ nav a {
     gap: 15px;
     padding: 10px;
   }
-  .album-3, .album-4, .album-5 {
+  .album-3,
+  .album-4,
+  .album-5 {
     display: none;
   }
   .login-container {
@@ -230,7 +231,6 @@ nav a {
     grid-column: 1;
   }
 }
-
 
 /* Disques - pages/disques.html
 !--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
@@ -333,21 +333,30 @@ nav a {
 }
 
 .album-card h3 {
-  margin: 0 15px 0 0;
+  margin: 0;
   font-size: 1.2em;
   grid-row: 3;
   justify-self: center;
+  text-align: center;
 }
 
-.album-card button {
+.album-card a {
+  text-decoration: none;
+  justify-self: center;
+  grid-row: 4;
+}
+
+.album-card a button {
+  display: inline-block;
+  text-decoration: none;
+  justify-self: center;
   padding: 8px 16px;
   background-color: #27272a;
   color: white;
   border: none;
   border-radius: 4px;
-  grid-row: 4;
-  width: 50%;
-  justify-self: center;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* Responsive page/disques.html - albums */
@@ -372,42 +381,27 @@ nav a {
 /* Styles d'impression disques.html
 ========================================================================== */
 @media print {
-  /* Masquer l'en-tête et le pied de page */
   header,
   footer {
     display: none;
   }
 
-  /* Pâlir la couleur de fond des barres de style de musique */
   .categories h2 {
-    background-color: #e0e0e0 !important; /* Utilisation de !important pour s'assurer que la couleur est écrasée */
-    color: #000000 !important; /* Assurer une bonne lisibilité du texte */
+    background-color: #e0e0e0 !important;
+    color: #000000 !important;
   }
 
-  /* Optimisations supplémentaires pour l'impression */
-  body {
-    background: white;
-    color: black;
-  }
-
-  /* Assurer que les images s'impriment correctement */
   .grid-image {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
 }
 
-
-
 /* Fiche de disques - pages/fiche_de_disques.html
 !--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
-
-
 
 /* Formulaires
 ========================================================================== */
 
 /* Règles spécifiques aux pages
 ========================================================================== */
-
-
