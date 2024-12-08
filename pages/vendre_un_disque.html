@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabarit de site web</title>
+    <title>Vendre un disque</title>
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
@@ -26,7 +26,135 @@
     </header>
 
     <!-- Main Content -->
-    <main class="homepage-main-content container"></main>
+    <main class="main-vendre-un-disque container">
+      <form
+        action="/pages/fiche_de_disques.html"
+        method="GET"
+        class="vendre-un-disque-form"
+      >
+        <div>
+          <label for="titre" class="vendre-un-disque-label"
+            >Titre de l'album *</label
+          >
+          <input
+            type="text"
+            id="titre"
+            name="titre"
+            required
+            class="vendre-un-disque-input"
+          />
+        </div>
+
+        <div>
+          <label for="artiste" class="vendre-un-disque-label"
+            >Nom de l'artiste *</label
+          >
+          <input
+            type="text"
+            id="artiste"
+            name="artiste"
+            required
+            class="vendre-un-disque-input"
+          />
+        </div>
+
+        <div class="vendre-un-disque-layout">
+          <label class="vendre-un-disque-label">Style(s) de musique *</label>
+          <div>
+            <input type="checkbox" id="pop" name="styles[]" value="pop" />
+            <label for="pop">Pop</label>
+            <input type="checkbox" id="hiphop" name="styles[]" value="hiphop" />
+            <label for="hiphop">Hip-hop</label>
+            <input type="checkbox" id="metal" name="styles[]" value="metal" />
+            <label for="metal">Métal</label>
+            <input type="checkbox" id="rock" name="styles[]" value="rock" />
+            <label for="rock">Rock</label>
+            <input type="checkbox" id="punk" name="styles[]" value="punk" />
+            <label for="punk">Punk</label>
+            <input
+              type="checkbox"
+              id="electro"
+              name="styles[]"
+              value="electro"
+            />
+            <label for="electro">Électro</label>
+            <input
+              type="checkbox"
+              id="classique"
+              name="styles[]"
+              value="classique"
+            />
+            <label for="classique">Classique</label>
+            <input type="checkbox" id="jazz" name="styles[]" value="jazz" />
+            <label for="jazz">Jazz</label>
+          </div>
+        </div>
+
+        <div>
+          <label for="qualite" class="vendre-un-disque-label"
+            >Qualité de l'album *</label
+          >
+          <select
+            id="qualite"
+            name="qualite"
+            required
+            class="vendre-un-disque-input"
+          >
+            <option value="">Sélectionner</option>
+            <option value="excellente">Excellente</option>
+            <option value="bonne">Bonne</option>
+            <option value="passable">Passable</option>
+            <option value="basse">Basse</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="date" class="vendre-un-disque-label"
+            >Date de parution *</label
+          >
+          <input
+            type="month"
+            id="date"
+            name="date"
+            required
+            class="vendre-un-disque-input"
+          />
+        </div>
+
+        <div>
+          <label for="pochette" class="vendre-un-disque-label"
+            >Image de la pochette *</label
+          >
+          <input
+            type="file"
+            id="pochette"
+            name="pochette"
+            accept="image/*"
+            required
+            class="vendre-un-disque-input"
+          />
+        </div>
+
+        <div class="vendre-un-disque-layout">
+          <label for="description" class="vendre-un-disque-label"
+            >Description</label
+          >
+          <textarea
+            id="description"
+            name="description"
+            maxlength="400"
+            rows="4"
+            class="vendre-un-disque-textarea"
+          ></textarea>
+        </div>
+
+        <div class="vendre-un-disque-layout">
+          <button type="submit" class="vendre-disque-button">
+            Mettre en vente
+          </button>
+        </div>
+      </form>
+    </main>
 
     <!-- Footer -->
     <footer>
