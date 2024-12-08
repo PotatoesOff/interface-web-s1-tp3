@@ -214,145 +214,142 @@ nav a {
 !--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
 
 .disques-title {
-    font-size: 2.75rem;
-    margin-bottom: 10px;
+  font-size: 2.75rem;
+  margin-bottom: 10px;
 }
 
 .section-disques {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .search-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .search-box {
-    display: flex;
-    max-width: 500px; 
+  display: flex;
+  max-width: 500px;
 }
 
 .search-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    width: 350px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 350px;
 }
 
 .search-button {
-    padding: 10px 20px;
-    background-color: #27272a;
-    color: white;
-    border: none;
-    white-space: nowrap;
+  padding: 10px 20px;
+  background-color: #27272a;
+  color: white;
+  border: none;
+  white-space: nowrap;
 }
 
 .disques-title {
-    margin: 0;
+  margin: 0;
 }
 
 /* Responsive page/disques.html - recherche */
 @media (max-width: 768px) {
-    .search-bar {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .search-form {
-        width: 100%;
-        max-width: none;
-    }
+  .search-form {
+    width: 100%;
+    max-width: none;
+  }
 
-    .search-input {
-        width: 100%;
-    }
+  .search-input {
+    width: 100%;
+  }
 }
 
 .categories {
-    background-color: #fff;
-    border-radius: 4px;
-	margin-top: 50px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-top: 50px;
 }
 
 .categories h2 {
-    background-color: #4a4a4a;
-    color: white;
-    padding: 10px 15px;
-    margin: 0 0 20px 0;
+  background-color: #4a4a4a;
+  color: white;
+  padding: 10px 15px;
+  margin: 0 0 20px 0;
 }
 
 .albums-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .album-card {
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    gap: 5px;
-    padding: 15px;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 5px;
+  padding: 15px;
 }
 
 .album-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    grid-row: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  grid-row: 1;
 }
 
 .album-card p {
-    margin: 15px 0 0 0;
-    color: #666;
-    grid-row: 2;
-	justify-self: center;
+  margin: 15px 0 0 0;
+  color: #666;
+  grid-row: 2;
+  justify-self: center;
 }
 
 .album-card h3 {
-    margin: 0 15px 0 0;
-    font-size: 1.2em;
-    grid-row: 3;
-	justify-self: center;
+  margin: 0 15px 0 0;
+  font-size: 1.2em;
+  grid-row: 3;
+  justify-self: center;
 }
 
 .album-card button {
-    padding: 8px 16px;
-    background-color: #27272a;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    grid-row: 4;
-	width: 50%;
-	justify-self: center;
+  padding: 8px 16px;
+  background-color: #27272a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  grid-row: 4;
+  width: 50%;
+  justify-self: center;
 }
-
 
 /* Responsive page/disques.html - albums */
 @media (max-width: 1200px) {
-    .albums-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .albums-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 900px) {
-    .albums-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .albums-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
-    .albums-grid {
-        grid-template-columns: 1fr;
-    }
+  .albums-grid {
+    grid-template-columns: 1fr;
+  }
 }
-
 
 /* Formulaires
 ========================================================================== */
 
 /* Règles spécifiques aux pages
 ========================================================================== */
-
