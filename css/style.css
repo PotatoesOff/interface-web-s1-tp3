@@ -369,6 +369,36 @@ nav a {
   }
 }
 
+/* Styles d'impression disques.html
+========================================================================== */
+@media print {
+  /* Masquer l'en-tête et le pied de page */
+  header,
+  footer {
+    display: none;
+  }
+
+  /* Pâlir la couleur de fond des barres de style de musique */
+  .categories h2 {
+    background-color: #e0e0e0 !important; /* Utilisation de !important pour s'assurer que la couleur est écrasée */
+    color: #000000 !important; /* Assurer une bonne lisibilité du texte */
+  }
+
+  /* Optimisations supplémentaires pour l'impression */
+  body {
+    background: white;
+    color: black;
+  }
+
+  /* Assurer que les images s'impriment correctement */
+  .grid-image {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+
+
 /* Fiche de disques - pages/fiche_de_disques.html
 !--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
 
@@ -379,3 +409,5 @@ nav a {
 
 /* Règles spécifiques aux pages
 ========================================================================== */
+
+
