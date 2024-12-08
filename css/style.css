@@ -121,11 +121,6 @@ nav a {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .homepage-main-content {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* Composantes générales (exemples : section, cartes, tableaux, etc.)
 ========================================================================== */
@@ -209,6 +204,33 @@ nav a {
   grid-row: 4;
   grid-column: 3;
 }
+
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+  .homepage-main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+  .album-3, .album-4, .album-5 {
+    display: none;
+  }
+  .login-container {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .album-1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .album-2 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+}
+
 
 /* Disques - pages/disques.html
 !--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
@@ -347,6 +369,11 @@ nav a {
     grid-template-columns: 1fr;
   }
 }
+
+/* Fiche de disques - pages/fiche_de_disques.html
+!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
+
+
 
 /* Formulaires
 ========================================================================== */
