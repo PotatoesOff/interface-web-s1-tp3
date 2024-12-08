@@ -232,6 +232,52 @@ nav a {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .homepage-main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .login-container {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    padding-bottom: 20px;
+  }
+
+  .album-1 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .album-2 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .album-3,
+  .album-4,
+  .album-5 {
+    display: none;
+  }
+
+  .login-form h1 {
+    font-size: 2.5rem;
+  }
+
+  .login-form p {
+    font-size: 1.2rem;
+  }
+
+  .login-form button {
+    width: 40%;
+    font-size: 1.2rem;
+    height: 50px;
+  }
+}
+
 /* Disques - pages/disques.html
 !--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
 
@@ -246,6 +292,7 @@ nav a {
   padding: 20px;
 }
 
+/* Recherche */
 .search-bar {
   display: flex;
   justify-content: space-between;
@@ -293,6 +340,7 @@ nav a {
   }
 }
 
+/* Catégories */
 .categories {
   background-color: #fff;
   border-radius: 4px;
@@ -396,6 +444,7 @@ nav a {
     -webkit-print-color-adjust: exact;
   }
 }
+
 
 /* Fiche de disques - pages/fiche_de_disques.html
 !--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--!--*/
